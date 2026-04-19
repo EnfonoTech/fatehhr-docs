@@ -6,6 +6,11 @@ Capture a receipt, enter an amount, submit.
 
 Tap the **Expense** tab at the bottom of the screen.
 
+<figure class="screenshot">
+  <img src="/screenshots/expense-claims.jpeg" alt="Expense hub with totals and recent claims" />
+  <figcaption>Expense hub — Total Claimed, Pending, Approved, Paid at a glance, plus your recent submissions with status chips.</figcaption>
+</figure>
+
 The hub shows:
 
 1. **Total Claimed** and **Pending** — your all-time totals

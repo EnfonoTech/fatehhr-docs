@@ -6,6 +6,11 @@ The core of the app. Here's everything about the Check-in screen.
 
 From the home screen, tap the big **"Check In"** (or **"Check Out"** if you're already IN) button in the top card.
 
+<figure class="screenshot">
+  <img src="/screenshots/checkin-map.jpeg" alt="Check-in screen with map" />
+  <figcaption>The Check-in screen — OpenStreetMap preview of your GPS fix, reverse-geocoded address, geofence chip, and the big Check Out button.</figcaption>
+</figure>
+
 ## What the screen shows
 
 | Element | What it is |
@@ -72,6 +77,11 @@ Tap **Check-in history →** at the bottom of the Check-in screen. You'll see:
 - A **down arrow (↑)** on a grey badge for OUT
 - The location address or task name
 - The exact time (hours + minutes + seconds)
+
+<figure class="screenshot">
+  <img src="/screenshots/checkin-history.jpeg" alt="Full Check-in history list" />
+  <figcaption>Check-in history — chronological list of IN / OUT events with second-level timestamps so quick repeat taps are still distinguishable.</figcaption>
+</figure>
 
 On the home screen, the last **3** check-ins are also shown in the "Check-in history" card for quick reference.
 

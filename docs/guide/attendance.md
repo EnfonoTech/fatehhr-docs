@@ -6,6 +6,11 @@ A month-by-month view of your attendance, leave, and holidays.
 
 Tap the **Attendance** tab at the bottom of the screen.
 
+<figure class="screenshot">
+  <img src="/screenshots/attendance-calendar.jpeg" alt="Attendance calendar for April 2026" />
+  <figcaption>Attendance tab — colour-coded month grid with Present / Absent / On Leave counts and total hours worked.</figcaption>
+</figure>
+
 ## What you see
 
 The month grid shows one cell per day of the current month. Each cell is colour-coded based on your status that day.

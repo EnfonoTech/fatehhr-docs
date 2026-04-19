@@ -6,6 +6,11 @@ Request leave, see your balance, and review past applications.
 
 Tap the **Leave** tab at the bottom of the screen.
 
+<figure class="screenshot">
+  <img src="/screenshots/leave-balance.jpeg" alt="Leave hub showing balance gauges" />
+  <figcaption>Leave hub — gauge cards per leave type, "Request a Leave" button, and the latest applications with their status.</figcaption>
+</figure>
+
 The Leave hub shows, from top to bottom:
 
 1. **Leave Balance** — gauge cards per leave type (Annual, Sick, Casual, …) with remaining vs total

@@ -48,6 +48,11 @@ From now on, you only need to enter your password again if you log out. Day to d
 | **Expense** | Totals (Claimed, Pending, Approved, Paid), new claim button, recent claims |
 | **More** | Profile, payslips, announcements, notifications, sync errors, language, logout |
 
+<figure class="screenshot">
+  <img src="/screenshots/home-dashboard.jpeg" alt="Fateh HR home screen" />
+  <figcaption>Home tab — greeting, current check-in state, quick tiles for Leave / Expense / Tasks / Payslips, and the last three check-ins.</figcaption>
+</figure>
+
 ## When the sync bar turns orange
 
 At the top of most screens you'll see a thin status bar:

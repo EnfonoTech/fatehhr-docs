@@ -1,0 +1,38 @@
+/* Phone-screenshot figures — used across the user guide. */
+figure.screenshot {
+  margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+figure.screenshot img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+figure.screenshot figcaption {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+  text-align: center;
+  max-width: 320px;
+  line-height: 1.4;
+}
+
+/* Side-by-side row of screenshots */
+.screenshot-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.screenshot-row figure.screenshot {
+  margin: 0;
+  flex: 0 1 300px;
+}

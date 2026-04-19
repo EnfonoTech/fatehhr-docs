@@ -9,6 +9,11 @@ Access it from:
 - **Home** → **Payslip** (quick action tile), or
 - **More tab** → **Payslip**
 
+<figure class="screenshot">
+  <img src="/screenshots/payslips-list.jpeg" alt="List of monthly payslips" />
+  <figcaption>Payslips — every posted slip with period and net pay; tap one to open the detail view and download a PDF.</figcaption>
+</figure>
+
 ## The list
 
 Each row is one monthly payslip, most recent first. You see:

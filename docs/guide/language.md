@@ -19,6 +19,11 @@ The app switches immediately — no restart needed.
   - **English** — left to right (LTR)
   - **العربية** — right to left (RTL). The entire layout mirrors: back arrows, chevrons, sidebars, margins.
 
+<figure class="screenshot">
+  <img src="/screenshots/home-arabic-rtl.jpeg" alt="Home screen in Arabic with RTL layout" />
+  <figcaption>Home in العربية — the entire layout mirrors: the bell moves left, the tab bar reverses, and labels switch to Arabic.</figcaption>
+</figure>
+
 ## What doesn't change
 
 - Your data (names, addresses, descriptions) — those stay in whatever language they were entered in

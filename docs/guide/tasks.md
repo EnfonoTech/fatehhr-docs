@@ -6,6 +6,17 @@ See tasks assigned to you and track time on each.
 
 From the Home screen → **Tasks** quick action.
 
+<div class="screenshot-row">
+  <figure class="screenshot">
+    <img src="/screenshots/tasks-list.jpeg" alt="Tasks list, idle" />
+    <figcaption>Tasks — idle state, every card has a Start Timer button and a priority chip.</figcaption>
+  </figure>
+  <figure class="screenshot">
+    <img src="/screenshots/tasks-timer-running.jpeg" alt="Task timer running" />
+    <figcaption>Active task — live elapsed time and a red Stop Timer button replace Start.</figcaption>
+  </figure>
+</div>
+
 ## The list
 
 Your assigned tasks appear with:

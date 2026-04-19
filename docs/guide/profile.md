@@ -6,6 +6,11 @@ See your employee profile details.
 
 Tap the **More** tab at the bottom → your profile card is the first thing on the screen.
 
+<figure class="screenshot">
+  <img src="/screenshots/more-profile.jpeg" alt="More tab with profile and menu" />
+  <figcaption>More tab — profile card (avatar, name, employee ID), contact block, and links to Payslips, Announcements, Notifications and Sync Errors.</figcaption>
+</figure>
+
 ## What's shown
 
 - **Avatar** — your photo from the Employee record (falls back to your initials)
@@ -33,6 +38,21 @@ Profile details are **read-only from the mobile app**. This is deliberate — ed
 ## "Editing your bank details? Contact HR."
 
 This hint at the bottom of the Bank section confirms the above — bank changes are sensitive and go through HR.
+
+## Announcements & Notifications
+
+The **More** tab also links to two read-only streams:
+
+<div class="screenshot-row">
+  <figure class="screenshot">
+    <img src="/screenshots/announcements.jpeg" alt="Announcements list" />
+    <figcaption>Announcements — company-wide posts pushed by HR; pinned items float to the top.</figcaption>
+  </figure>
+  <figure class="screenshot">
+    <img src="/screenshots/notifications-empty.jpeg" alt="Notifications empty state" />
+    <figcaption>Notifications — personal alerts. An empty state reads "You're all caught up."</figcaption>
+  </figure>
+</div>
 
 ## Next
 
