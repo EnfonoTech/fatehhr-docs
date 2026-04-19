@@ -37,27 +37,4 @@ features:
     details: Full Arabic with right-to-left layout. Switch anytime from the More tab.
 ---
 
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #2E5D5A 30%, #6fa59f);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #2E5D5A55 50%, #6fa59f55 50%);
-  --vp-home-hero-image-filter: blur(56px);
-}
-
-.VPHero .image-container {
-  transform: none !important;
-}
-.VPHero .image-bg {
-  width: 320px;
-  height: 320px;
-}
-.VPHero .image-src {
-  position: relative;
-  max-width: 260px;
-  max-height: 560px;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
-}
-</style>
+<!-- hero + feature styling lives in .vitepress/theme/custom.css -->
