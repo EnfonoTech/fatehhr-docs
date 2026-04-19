@@ -14,7 +14,21 @@ The label in the app adapts to your device:
 
 ## Enabling it
 
-You'll be asked automatically once, right after your first successful **PIN setup**. A small card slides up:
+There are two places you can enable it.
+
+### Option 1 — From the More tab (any time)
+
+1. Open the **More** tab (bottom-right of the screen).
+2. Scroll to the **Security** card.
+3. Tap the toggle next to **"Unlock with Fingerprint"** (or Face ID / whatever your device shows).
+4. Your phone's native biometric prompt appears — place your finger / look at the screen.
+5. Toggle flips green. Done.
+
+This is the recommended path if you've been using the app for a while and haven't seen the enrollment prompt.
+
+### Option 2 — After setting a PIN (new or reset)
+
+You'll be asked automatically once, right after a successful **PIN setup** (either your first PIN or a reset via Forgot PIN). A small card slides up:
 
 > **Enable Fingerprint?**
 >
@@ -22,9 +36,17 @@ You'll be asked automatically once, right after your first successful **PIN setu
 >
 > **[Not now]   [Enable Fingerprint]**
 
-Tap **Enable** → your phone's native biometric prompt appears → place your finger / look at the screen → confirmation → done. You're taken to the home screen.
+Tap **Enable** → phone's biometric prompt → done.
 
-If you tap **Not now**, you can still enable it later (the app asks again after your next PIN unlock).
+If you tap **Not now**, you can still enable it later from the More tab (see Option 1).
+
+::: tip Why didn't I see the prompt?
+The one-time enrollment modal only appears immediately after saving a **new** PIN. If you upgraded the app while keeping your existing PIN, the modal won't fire — use **Option 1** from the More tab instead.
+:::
+
+## Turning it off
+
+Same **Security** card → tap the green toggle again. It flips off. Next time you open the app, you'll type your PIN as normal.
 
 ## Daily use
 
@@ -46,16 +68,6 @@ The biometric prompt is the OS's — not ours. It handles failure natively (thre
 - A **"Use Fingerprint"** button stays at the bottom to retry biometric
 
 **Your PIN always works** as a fallback. Biometric is just faster when it's working.
-
-## Turning it off
-
-Right now, to disable biometric unlock:
-
-1. Tap **Forgot PIN** on the PIN screen (logs you out)
-2. Log in with password → set a new PIN
-3. Tap **Not now** when the biometric prompt appears
-
-(A direct toggle in the More tab is on our roadmap.)
 
 ## Security notes
 
