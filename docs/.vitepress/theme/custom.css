@@ -1,30 +1,35 @@
 /* =========================================================================
    Fateh HR — docs theme polish.
-   Editorial serif display + field-product hero; restrained feature cards.
+   Warm editorial serif + subtle teal glow behind the product screenshot.
+   Works WITH VitePress default hero grid — no layout surgery.
    ========================================================================= */
 
 :root {
   --fhr-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --fhr-teal: #2E5D5A;
   --fhr-teal-2: #6fa59f;
-  --fhr-ink: #1b2a28;
 }
 
 /* -------------------------------------------------------------------------
-   Hero — replace the blurred background square with an editorial scene.
-   A soft teal aurora, a dotted grid, and the phone screenshot tilted with
-   a real drop shadow and two floating "proof" chips.
+   Hero — kill VitePress's blurred square, replace with a proper aurora
+   glow. Phone screenshot gets real proportions + a soft drop shadow.
+   We DO NOT touch grid/flex sizing — only visual properties.
    ------------------------------------------------------------------------- */
 
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(135deg, #1f4441 0%, #2E5D5A 45%, #6fa59f 100%);
-  /* neutralise the default hero background square — we draw our own scene */
-  --vp-home-hero-image-background-image: none;
-  --vp-home-hero-image-filter: none;
+  --vp-home-hero-image-background-image: radial-gradient(
+    ellipse 60% 55% at 50% 50%,
+    rgba(111, 165, 159, 0.55) 0%,
+    rgba(46, 93, 90, 0.25) 45%,
+    transparent 75%
+  );
+  --vp-home-hero-image-filter: blur(32px);
 }
 
-.VPHero .name {
+.VPHero .name,
+.VPHero .text {
   font-family: var(--fhr-serif);
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -32,156 +37,62 @@
 }
 
 .VPHero .text {
-  font-family: var(--fhr-serif);
   font-weight: 400;
-  letter-spacing: -0.015em;
 }
 
 .VPHero .tagline {
   max-width: 32rem;
-  font-size: 1.05rem;
   line-height: 1.55;
 }
 
-/* Image side — the scene ----------------------------------------------- */
-
-.VPHero .VPImage {
-  position: relative;
-  z-index: 2;
-}
-
-.VPHero .image {
-  position: relative;
-}
-
-.VPHero .image-container {
-  position: relative;
-  transform: none !important;
-  width: min(420px, 100%);
-  height: 560px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Aurora glow behind the phone */
+/* Aurora glow — enlarge the default circular bg so it feels like atmosphere,
+   not a blurred disc. */
 .VPHero .image-bg {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  background:
-    radial-gradient(ellipse 60% 55% at 50% 45%, rgba(111, 165, 159, 0.45) 0%, rgba(46, 93, 90, 0.18) 45%, transparent 75%),
-    radial-gradient(circle at 30% 20%, rgba(111, 165, 159, 0.35) 0%, transparent 45%);
-  filter: blur(40px);
+  width: 360px !important;
+  height: 360px !important;
   opacity: 0.9;
-  border-radius: 0;
-  transform: none;
 }
 
-/* Dotted grid texture — sits between glow and phone */
-.VPHero .image-container::before {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  background-image: radial-gradient(circle, rgba(111, 165, 159, 0.25) 1px, transparent 1px);
-  background-size: 18px 18px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 40%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 40%, transparent 80%);
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* The actual phone screenshot */
+/* Phone screenshot — constrain to phone proportions, rounded like a device,
+   layered shadow for depth. Keep VitePress's absolute centering. */
 .VPHero .image-src {
-  position: relative;
-  z-index: 1;
-  width: auto;
-  max-width: 270px;
-  max-height: 540px;
+  max-width: 260px !important;
+  max-height: 540px !important;
   border-radius: 32px;
   border: 1px solid rgba(27, 42, 40, 0.08);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.6) inset,
     0 2px 8px rgba(27, 42, 40, 0.08),
-    0 20px 40px -12px rgba(27, 42, 40, 0.25),
-    0 40px 80px -20px rgba(46, 93, 90, 0.35);
-  transform: perspective(1400px) rotateY(-6deg) rotateX(2deg);
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    0 20px 40px -12px rgba(27, 42, 40, 0.22),
+    0 40px 80px -20px rgba(46, 93, 90, 0.3);
 }
 
-.VPHero .image-container:hover .image-src {
-  transform: perspective(1400px) rotateY(-3deg) rotateX(1deg) translateY(-4px);
+/* Give the image side a bit more room so the bigger glow can breathe. */
+.VPHero .image-container {
+  width: 400px !important;
+  height: 540px !important;
 }
 
-/* Floating proof chips — built with pseudo-elements on the image wrapper.
-   Two chips: "Checked in 09:00" (top-left) and "Payslip ready" (bottom-right). */
-.VPHero .image::before,
-.VPHero .image::after {
-  position: absolute;
-  z-index: 3;
-  padding: 10px 14px 10px 34px;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  font-family: var(--vp-font-family-base);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
-  white-space: nowrap;
-  box-shadow: 0 10px 30px -10px rgba(27, 42, 40, 0.25);
-  animation: fhr-chip-float 6s ease-in-out infinite;
-}
-
-.VPHero .image::before {
-  content: "Checked in · 09:00";
-  top: 16%;
-  left: -4%;
-  background-image:
-    radial-gradient(circle 5px at 16px 50%, #2E5D5A 0 5px, transparent 6px);
-  animation-delay: 0s;
-}
-
-.VPHero .image::after {
-  content: "Payslip ready";
-  bottom: 14%;
-  right: -2%;
-  background-image:
-    radial-gradient(circle 5px at 16px 50%, #c89b3c 0 5px, transparent 6px);
-  animation-delay: 2s;
-}
-
-@keyframes fhr-chip-float {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
+@media (max-width: 960px) {
+  .VPHero .image-container {
+    width: 280px !important;
+    height: 400px !important;
+  }
+  .VPHero .image-bg {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  .VPHero .image-src {
+    max-width: 220px !important;
+    max-height: 440px !important;
+  }
 }
 
 /* Action buttons — slightly more editorial */
-.VPHero .VPButton.brand {
-  border-radius: 10px;
-  font-weight: 500;
-  letter-spacing: -0.005em;
-}
-
+.VPHero .VPButton.brand,
 .VPHero .VPButton.alt {
   border-radius: 10px;
-}
-
-/* Mobile — drop the tilt and chips, stack cleanly ---------------------- */
-@media (max-width: 960px) {
-  .VPHero .image-container {
-    height: 460px;
-    width: 100%;
-  }
-  .VPHero .image-src {
-    transform: none;
-    max-width: 220px;
-    max-height: 440px;
-  }
-  .VPHero .image::before,
-  .VPHero .image::after {
-    display: none;
-  }
+  font-weight: 500;
 }
 
 /* -------------------------------------------------------------------------
@@ -281,8 +192,7 @@ figure.screenshot figcaption {
 }
 
 /* -------------------------------------------------------------------------
-   Typography tweaks across guide pages — not aggressive, just a hint of
-   the serif on h1 so the brand carries through.
+   Guide H1 — carries the serif so the brand feels consistent.
    ------------------------------------------------------------------------- */
 
 .VPDoc h1 {
