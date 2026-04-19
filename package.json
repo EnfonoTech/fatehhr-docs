@@ -1,0 +1,17 @@
+{
+  "name": "fatehhr-docs",
+  "version": "1.0.0",
+  "description": "User documentation for the Fateh HR mobile app",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "author": "Enfono Technologies",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
