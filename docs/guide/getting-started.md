@@ -53,6 +53,14 @@ From now on, you only need to enter your password again if you log out. Day to d
   <figcaption>Home tab — greeting, current check-in state, quick tiles for Leave / Expense / Tasks / Payslips, and the last three check-ins.</figcaption>
 </figure>
 
+### Worked today card
+
+Just below the Check-in card, a **"Worked today"** chip shows how many
+hours you've clocked today (e.g. `8h 12m`). It's the sum of all your
+completed IN → OUT pairs for the day. While you're still checked IN it
+**ticks live** — a small green pulse marks the running state, and the
+number increments every second.
+
 ## When the sync bar turns orange
 
 At the top of most screens you'll see a thin status bar:

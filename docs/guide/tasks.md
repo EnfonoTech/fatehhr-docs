@@ -2,6 +2,15 @@
 
 See tasks assigned to you and track time on each.
 
+::: tip Ties to attendance
+If your HR team has set **Attendance Mode** to *Timer Based*, starting a
+task timer here is the same as using the big **Check In** button with
+that task selected — server writes both the Timesheet row AND an
+`Employee Checkin (IN)`. If the mode is *Checkin Based* (the default),
+starting a timer here writes **only** the Timesheet row. See
+**[Attendance mode](/guide/attendance-mode)**.
+:::
+
 ## Open Tasks
 
 From the Home screen → **Tasks** quick action.

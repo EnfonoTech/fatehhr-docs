@@ -2,6 +2,13 @@
 
 The core of the app. Here's everything about the Check-in screen.
 
+::: tip Two modes
+Your HR team configures whether the big **Check In** button writes
+attendance directly (*Checkin Based*, the default) or first asks you to
+pick a task (*Timer Based*). The rest of this page describes the
+default. For the task-picker variant, see **["Timer Based" flow](#timer-based-flow)** below.
+:::
+
 ## Open the screen
 
 From the home screen, tap the big **"Check In"** (or **"Check Out"** if you're already IN) button in the top card.
@@ -94,7 +101,42 @@ On the home screen, the last **3** check-ins are also shown in the "Check-in his
 | "Queued — will sync when online." | Normal for offline mode. It will sync automatically when network returns. |
 | App stuck on "Finding your location…" | Wait up to 10 s, then tap Check In again. Or restart the app. |
 
+## "Timer Based" flow
+
+If your HR admin has set **Attendance Mode** to *Timer Based*, the
+Check-In button works a little differently:
+
+1. You tap **Check In** on the home screen.
+2. The Check-in screen asks you to **pick a task** from your assigned
+   list before you can proceed.
+3. You select a task, the app captures GPS, and taps **Check In**.
+4. Server creates an **Employee Checkin (IN)** plus a running
+   **Timesheet** row tied to that task.
+5. On the Tasks tab, that same task now shows a running timer — same
+   timer, viewed two ways.
+
+### Checking out in Timer mode
+
+1. Tap **Check Out** from home.
+2. The app shows the running task name and the elapsed time on the
+   Check-in screen.
+3. Tap **Check Out** → the running timer stops, the Timesheet row
+   closes with hours, and an **Employee Checkin (OUT)** is written.
+
+### Switching task mid-day
+
+Stop on one task (Check Out) then Check In again with a different task.
+You'll get two attendance pairs for the day — one per task.
+
+### No tasks assigned?
+
+You'll see "No tasks assigned." Message your HR team — in this mode they
+need to assign at least one open task before you can check in.
+
+See **[Attendance mode](/guide/attendance-mode)** for the full logic.
+
 ## Next
 
 - [How offline mode works](/guide/offline) — essential reading for field staff
 - [Attendance calendar](/guide/attendance)
+- [Attendance mode](/guide/attendance-mode) — why your check-in screen looks like it does

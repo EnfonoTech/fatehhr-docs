@@ -71,6 +71,12 @@ export default defineConfig({
           ],
         },
         {
+          text: "For HR admins",
+          items: [
+            { text: "Attendance mode", link: "/guide/attendance-mode" },
+          ],
+        },
+        {
           text: "HR actions",
           items: [
             { text: "Apply for leave", link: "/guide/leave" },
