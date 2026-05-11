@@ -29,9 +29,8 @@ jobs:
 
       # Copy built output to repo root for flat serving
       - run: |
-          rm -rf docs node_modules pnpm-lock.yaml scripts
           cp -r docs/.vitepress/dist/* .
-          rm -rf docs
+          rm -rf docs node_modules pnpm-lock.yaml scripts
 
       - name: Push to dist branch
         run: |
